@@ -2,7 +2,7 @@ interface WhatsAppButtonProps {
   className?: string;
 }
 
-const phone = '5493434674197'; // Reemplazar por el número real
+const phone = '5493434674197';
 const message = encodeURIComponent('¡Hola! Quiero consultar por los servicios del salón.');
 const whatsappUrl = `https://wa.me/${phone}?text=${message}`;
 

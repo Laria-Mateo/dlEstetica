@@ -1,47 +1,91 @@
+import React from 'react';
+import { Badge } from "../components/ui/badge";
+import { Card, CardContent } from "../components/ui/card";
+import { MapPin, Scissors, Heart, Star } from "lucide-react";
 import danielaImg from '../assets/daniela.png';
 
 const About = () => (
-  <section id="sobre-mi" className="max-w-5xl mx-auto px-4 py-16">
-    <div className="flex flex-col md:flex-row items-center md:items-start gap-10 mb-10">
-      <div className="flex-1 text-center md:text-left">
-        <h2 className="text-3xl font-bold mb-4">Sobre mí</h2>
-        <p className="text-lg mb-4">
-          ¡Hola! Soy <span className="font-semibold">Daniela Laria</span>, fundadora del Salón de Belleza. Con más de 7 años de experiencia en el rubro de la peluquería, me especializo en tratamientos capilares, color, nutrición y asesoramiento personalizado para cada cliente.
-        </p>
-        <p className="text-lg mb-4">
-          Además, realizo servicios de <span className="font-semibold">pestañas, maquillajes, cejas, uñas</span> y mucho más para que puedas encontrar todo lo que necesitás en un solo lugar. Mi objetivo es que cada persona que visite el salón se sienta única, reciba la mejor atención y salga feliz con su look.
-        </p>
-        <p className="text-lg">
-          ¡Te espero para que vivas una experiencia de belleza profesional!
+  <section id="sobre-mi" className="py-20 px-4 bg-white">
+    <div className="container mx-auto">
+      <div className="text-center mb-16">
+        <Badge className="bg-[#65c6b6]/10 text-[#65c6b6] border-[#65c6b6]/20 mb-4">
+          Sobre Mí
+        </Badge>
+        <h2 className="text-4xl font-bold text-gray-800 mb-4">Conoce a Daniela Laria</h2>
+        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          Profesional apasionada por la belleza con años de experiencia en el rubro
         </p>
       </div>
-      <div className="hidden md:flex items-center h-40">
-        <div className="w-2 h-32 rounded-full bg-[#65c6b6] mx-2"></div>
-      </div>
-      <div className="flex-1 flex justify-center md:justify-end">
-        <img
-          src={danielaImg}
-          alt="Daniela Laria - Profesional"
-          className="w-64 h-64 object-cover rounded-2xl shadow-lg border-4 border-[#65c6b6] bg-white"
-        />
-      </div>
-    </div>
-    <div className="w-full flex flex-col items-center mt-12">
-      <div className="w-full max-w-xl rounded-xl overflow-hidden shadow-lg border border-[#e0e0e0] bg-white">
-        <div className="flex items-center gap-2 px-6 py-4 border-b border-[#e0e0e0] bg-[#f6fdfa]">
-          <svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M12 21c4.97-6.16 7.45-9.24 7.45-12.04C19.45 5.01 16.7 2.5 13.5 2.5S7.55 5.01 7.55 8.96C7.55 11.76 10.03 14.84 12 21Z" stroke="#65c6b6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><circle cx="12" cy="9" r="2.5" fill="#65c6b6"/></svg>
-          <span className="text-lg font-semibold text-[#222]">Ubicación</span>
+
+      <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="space-y-6">
+          <div className="space-y-4">
+            <h3 className="text-2xl font-bold text-gray-800">¡Hola! Soy Daniela Laria</h3>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              Fundadora del Salón de Belleza con más de <span className="font-semibold text-[#65c6b6]">7 años de experiencia</span> en el rubro de la peluquería. Me especializo en tratamientos capilares, color, nutrición y asesoramiento personalizado para cada cliente.
+            </p>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              Además, realizo servicios de <span className="font-semibold text-[#65c6b6]">pestañas, maquillajes, cejas, uñas</span> y mucho más para que puedas encontrar todo lo que necesitás en un solo lugar.
+            </p>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              Mi objetivo es que cada persona que visite el salón se sienta única, reciba la mejor atención y salga feliz con su look.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-3 gap-6 pt-6">
+            <div className="text-center">
+              <div className="w-12 h-12 bg-[#65c6b6] rounded-full flex items-center justify-center mx-auto mb-2">
+                <Scissors className="w-6 h-6 text-white" />
+              </div>
+              <div className="text-2xl font-bold text-[#65c6b6]">+7</div>
+              <div className="text-sm text-gray-600">Años Experiencia</div>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-[#65c6b6] rounded-full flex items-center justify-center mx-auto mb-2">
+                <Heart className="w-6 h-6 text-white" />
+              </div>
+              <div className="text-2xl font-bold text-[#65c6b6]">100+</div>
+              <div className="text-sm text-gray-600">Clientes Felices</div>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-[#65c6b6] rounded-full flex items-center justify-center mx-auto mb-2">
+                <Star className="w-6 h-6 text-white" />
+              </div>
+              <div className="text-2xl font-bold text-[#65c6b6]">5★</div>
+              <div className="text-sm text-gray-600">Calificación</div>
+            </div>
+          </div>
         </div>
-        <iframe
-          title="Ubicación Salón de Belleza Daniela Laria"
-          src="https://www.google.com/maps?q=-31.766170,-60.495853&z=16&output=embed"
-          width="100%"
-          height="300"
-          style={{ border: 0 }}
-          allowFullScreen={true}
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+
+        <div className="relative flex justify-center">
+          <div className="absolute inset-0 bg-[#65c6b6]/20 rounded-3xl transform rotate-6"></div>
+          <img
+            src={danielaImg}
+            alt="Daniela Laria - Profesional"
+            className="relative rounded-3xl shadow-2xl object-contain w-full max-w-md"
+          />
+        </div>
+      </div>
+
+      <div className="text-center">
+        <Card className="border-0 shadow-xl max-w-4xl mx-auto">
+          <CardContent className="p-8">
+            <div className="flex items-center justify-center gap-2 mb-6">
+              <MapPin className="w-6 h-6 text-[#65c6b6]" />
+              <h3 className="text-2xl font-bold text-gray-800">Ubicación</h3>
+            </div>
+            <iframe
+              title="Ubicación Salón de Belleza Daniela Laria"
+              src="https://www.google.com/maps?q=-31.766170,-60.495853&z=16&output=embed"
+              width="100%"
+              height="300"
+              style={{ border: 0, borderRadius: '12px' }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </CardContent>
+        </Card>
       </div>
     </div>
   </section>
